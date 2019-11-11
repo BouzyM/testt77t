@@ -1,7 +1,7 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "1"
+var adminprefix = '1'
 
 
 //bc
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "$";
+  var prefix = "1";
 
   client.on("message", message => {
   
@@ -66,7 +66,7 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === '1help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -90,7 +90,7 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["474496300235227137"]
+const developers = ["480107807861899264"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;

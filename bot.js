@@ -1,7 +1,7 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "1"
-var adminprefix = '1'
+var prefix = "$"
+var adminprefix = '$'
 
 
 //bc
@@ -14,7 +14,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  Number of recipients `);
   message.delete();
   };
   });
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "1";
+  var prefix = "$";
 
   client.on("message", message => {
   
@@ -34,7 +34,7 @@ client.on("message", message => {
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
    m.send(`${argresult}\n ${m}`);
   })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  Number of recipients `); 
    message.delete(); 
   };     
   });
@@ -57,8 +57,8 @@ client.on('ready',  () => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('Ladminbc')){
-if(!message.author.id === '612759611820474409') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+if(!message.author.id === '647925037822771210') return;
+message.channel.sendMessage('The message is being sent |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -76,13 +76,13 @@ m.sendMessage(args)
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**Help|هيلب
+         .setDescription(`**H E L P | BOT CREATED BY W.#1111
 
-       $bc | لأرسال برود كاست للكل
+       $bc | Send a Broadcast to everyone
 
-       $obc  |  لأرسال برود كاست للأونلاين
+       $obc  |  To send a Broadcast online
 
-       $adminbc | برودكاست عادي
+       $adminbc | Normal Broadcast
 
        ** `)
    message.author.sendEmbed(embed)
@@ -90,7 +90,7 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["647925037822771210"]
+const developers = ["466645239428284416"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
